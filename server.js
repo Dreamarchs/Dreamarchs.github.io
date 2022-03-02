@@ -12,5 +12,8 @@ httpServer.listen(8080, function() {
     console.log("Server running on 8080");
 });
 
-app.use(express.static("public"));
+app.get("/", (req,res) => 
+{
+    res.send(index.html);
+});
 
